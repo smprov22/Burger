@@ -1,9 +1,7 @@
 <div class="row">
-    <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Burger Time!</h1>
+        <img class="center" src="/images/Bobs_burger.png" alt="bob's burger picture">
         <p class="lead">Add your own custom burger or click a devour button to eat one from our prepared menu.</p>
-    </div>
     </div>
 </div>
 
@@ -11,7 +9,7 @@
     <!-- Left side (ready to eat) -->
     <div class="col-md-2"></div>
     <div class="col-md-3">
-        <h4 class="red_font">Ready to eat!</h4>
+        <h4 class="red-text">Ready to eat!</h4>
         <div id="ready_to_eat">
 
             {{#each burgers}}
@@ -20,7 +18,7 @@
                 <div class="input-group">
                     <li class="form-control">{{id}}. {{name}}</li>
                     <span class="input-group-btn">
-                        <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                        <button class="btn btn-danger devour-button" type="submit">Devour It!</button>
                     </span>
                 </div>
             </form>
@@ -32,14 +30,14 @@
 
     <!-- Right side (already eaten) -->
     <div class="col-md-3">
-        <h4 class="red_font">Already eaten!</h4>
+        <h4 class="red-text">Already eaten!</h4>
         <div id="already_eaten">
 
             <!-- Dynamically Insert Eaten Burgers Here -->
             {{#each burgers}}
             {{#if this.devoured}}
-            <div class="input-group">
-                <li class="form-control">{{this.id}}. {{this.name}}</li>
+            <div class="input-group eaten">
+                <li class="form-control eaten-burgers">{{this.id}}. {{this.name}}</li>
             </div>
             {{/if}}
             {{/each}}
@@ -53,16 +51,17 @@
 
 <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <h2>Add a Burger</h2>
-        <form class="create-form">
+    <div class="col-md-4 form">
+        <h2 class="red-text">Add a Burger</h2>
+        <form class="create-form center">
 
             <div class="form-group">
                 <label for="burger">Burger Name:</label>
+                <br>
                 <input type="text" id="burger" name="name">
             </div>
 
-            <button id="submit-button" type="submit" class="btn btn-primary">Add Burger</button>
+            <button id="submit-button" type="submit" class="btn btn-danger">Add Burger</button>
         </form>
     </div>
     <div class="col-md-4"></div>
