@@ -1,5 +1,7 @@
 https://dry-waters-65638.herokuapp.com/
 
+![Burger-Logger](/public/images/screenshot/burger-screenshot.PNG)
+
 This is an Application that lets you Devour some burgers with the help of Node.js/Express/MySQL/Handlebars/Bootstrap.  The app was created using MVC layout and homemade ORMs.
 
 This is a simple full stack application with a front end implemented by HTML/CSS/Bootstrap and the help of Handlebars. The backend is implemented with Node/Express/MySQL.
